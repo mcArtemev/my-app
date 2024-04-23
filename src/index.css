@@ -169,3 +169,44 @@ h2 {
   margin:0 0 10px 0;
   padding: 1rem 10rem;
 }
+
+.Developer {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  word-wrap: break-all;
+  overflow-wrap: break-word;
+  width: 100%;
+  min-height:60px;
+  /* max-height: 250px; */
+  float:left;
+  font-size:18px;
+  /* font-weight:500; */
+  color:#ffc700;
+  line-height:2px;
+  line-height: 20px;
+  text-shadow:1px 1px 1px #000000;
+  background:#3c332f;
+  border-radius:5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44,62,80,0.10);
+  margin:0 0 10px 0;
+  /* padding: 1rem 10rem; */
+}
+
+.Developer ul {
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Developer li {
+  display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}

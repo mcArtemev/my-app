@@ -4,7 +4,10 @@ import {
 } from 'beautiful-skill-tree';
 import './index.css';
 import SkillTreeModule from './SkillTreeModule.tsx';
-import logo from "./logo.png";
+import rob from './Rob-pardo.png'
+import jeff from './jeff.png'
+import chris from './chris.jpg'
+import tom from './tom.jpg'
 
 const App = () => {
   return (
@@ -54,6 +57,39 @@ Blizzard регулярно выпускала новое дополнитель
 индустрию видеоигр в целом. Она стала одной из самых успешных и 
 долгоживущих онлайн-игр в истории.
     </p>
+    </div>
+    <div className='Developer'>
+      <p style={{margin: "0 20px"}}>Команда разработчиков</p>
+      <ul>
+        <li>Роб Пардо (Rob Pardo) 
+          <img
+              style={{ width: "300px", backgroundSize: "cover", height: "200px" }}
+              src={rob}
+              alt="wow logo."
+            />
+        </li>
+        <li>Джонатан Морхейм (Jeff Kaplan)
+          <img
+              style={{ width: "300px", height: "200px", backgroundSize: "cover" }}
+              src={jeff}
+              alt="wow logo."
+            />
+        </li>
+        <li>Крис Метзен (Chris Metzen)
+          <img
+              style={{ width: "300px", height: "200px", backgroundSize: "cover" }}
+              src={chris}
+              alt="wow logo."
+            />
+        </li>
+        <li>Том Чилтон (Tom Chilton)
+          <img
+              style={{ width: "300px", height: "200px", backgroundSize: "cover" }}
+              src={tom}
+              alt="wow logo."
+            />
+        </li>
+      </ul>
     </div>
     </>
   );
