@@ -1,372 +1,119 @@
-import React from 'react';
+import accelerateIcon from './data/Accelerateicon.jpg';
+import backdraftIcon from './data/Backdrafticon.jpg';
+import blightPhoenixIcon from './data/Blightpheonixicon.jpg';
+import chainReactionIcon from './data/Chainreactionicon.jpg';
+import cloudKillIcon from './data/Cloudkillicon.jpg';
+import convergeIcon from './data/Convergeicon.jpg';
+import elatedIcon from './data/Elatedicon.jpg';
+import fleetIcon from './data/Fleeticon.jpg';
+import flickerIcon from './data/Flickericon.jpg';
+import forsightIcon from './data/Foresighticon.jpg';
+import heliosIcon from './data/Heliosicon.jpg';
+import immolateIcon from './data/Immolateicon.jpg';
+import inertiaIcon from './data/Inertiaicon.jpg';
+import kineticReflectIcon from './data/Kineticreflecticon.jpg';
+import lifeTapIcon from './data/Lifetapicon.jpg';
+import mindsEyeIcon from './data/Mindseyeicon.jpg';
+import quickenIcon from './data/Quickenicon.jpg';
+import reaperIcon from './data/Reapericon.jpg';
+import recompenseIcon from './data/Recompenseicon.jpg';
+import resIcon from './data/Resicon.jpg';
+import restorationIcon from './data/Restorationicon.jpg';
+import ruinIcon from './data/Ruinicon.jpg';
+import scornIcon from './data/Scornicon.jpg';
+import subsequenceIcon from './data/Subsequenceicon.jpg';
+import suspensionIcon from './data/Suspensionicon.jpg';
+import sweetReleaseIcon from './data/Sweetreleaseicon.jpg';
+import thoughtLockIcon from './data/Thoughtlockicon.jpg';
+import wardIcon from './data/Wardicon.jpg';
+import wreckIcon from './data/Wreckicon.jpg';
 
-//import { SkillType, SavedDataType } from '../src';
-
-const lorem = 'lorem ipsum';
-
-function FakeContent() {
-  return (
-    <div>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: 'white', textDecoration: 'none' }}
-        href="https://calisthenicsskills.com"
-      >
-        Click here
-      </a>
-    </div>
-  );
-}
-
-function DummyVideo() {
-  return (
-    <iframe
-      style={{ border: 'none' }}
-      id="ytplayer"
-      width="100%"
-      src="https://www.youtube.com/embed/J3TjDUnlclk"
-    ></iframe>
-  );
-}
-
-export const legsPushData = [
+export const OutlawRogueData = [
   {
-    id: 'ass-squat',
-    title: 'Assisted Squat',
-    tooltip: {
-      content: <FakeContent />,
-    },
+    id: 1,
+    title: 'HP',
+    tooltip: { content: 'Basic HP' },
+    icon: lifeTapIcon,
     children: [
       {
-        id: 'parallel-squat',
-        title: 'Parallel Squat',
-        optional: true,
-        tooltip: {
-          content: lorem,
-          direction: 'left',
-        },
-        children: [
-          {
-            id: 'full-squat',
-            //icon: SquatIcon,
-            title: 'Reverse Hyperextensions',
-            tooltip: {
-              direction: 'right',
-              content: lorem,
-            },
-            children: [
-              {
-                id: 'cossack-squat',
-                //icon: SquatIcon,
-                title: 'Cossack Squat',
-                tooltip: {
-                  content: lorem,
-                },
-                children: [
-                  {
-                    id: 'ass-pistol-squat',
-                    title: 'Pistol Squat (Assisted)',
-                    color: 'alternative',
-                    tooltip: {
-                      content: <DummyVideo />,
-                    },
-                    children: [
-                      {
-                        id: 'pistol-squat',
-                        //icon: SquatIcon,
-                        title: 'Pistol Squat',
-                        tooltip: {
-                          content: lorem,
-                        },
-                        children: [],
-                      },
-                    ],
-                  },
-                ],
-              },
-              {
-                id: 'split-squat',
-                title: 'Split Squat',
-                tooltip: {
-                  content: lorem,
-                },
-                children: [
-                  {
-                    id: 'bulgarian-split-squat',
-                    //icon: SquatIcon,
-                    title: 'Bulgarian Split Squat',
-                    tooltip: {
-                      content: lorem,
-                    },
-                    children: [
-                      {
-                        id: 'deep-step-up',
-                        title: 'Deep Step Up',
-                        tooltip: {
-                          content: lorem,
-                        },
-                        children: [],
-                      },
-                      {
-                        id: 'beg-shrimp-squat',
-                        title: 'Beginner Shrimp Squat',
-                        optional: true,
-                        tooltip: {
-                          content: lorem,
-                        },
-                        children: [
-                          {
-                            id: 'shrimp-squat',
-                            //icon: SquatIcon,
-                            title: 'Shrimp Squat',
-                            tooltip: {
-                              content: lorem,
-                            },
-                            children: [],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'something-else',
-    tooltip: {
-      content: 'burn those leg muscles',
-    },
-    title: 'Something Else',
-    children: [
-      {
-        id: 'shrimp-squat-1',
-        //icon: SquatIcon,
-        title: 'Shrimp Squat',
-        tooltip: {
-          content: lorem,
-        },
-        children: [],
-      },
-      {
-        id: 'other-squat',
-        //icon: SquatIcon,
-        title: 'Other Squat',
-        tooltip: {
-          content: lorem,
-        },
-        children: [],
-      },
-    ],
-  },
-];
-
-export const hpSavedData = {
-  'ol-deadlift': {
-    optional: false,
-    nodeState: 'selected',
-  },
-  '45deg-hip-nc': {
-    optional: false,
-    nodeState: 'unlocked',
-  },
-  'nordic-curl-negative': {
-    optional: false,
-    nodeState: 'locked',
-  },
-  'nordic-curl': {
-    optional: false,
-    nodeState: 'locked',
-  },
-  'tuck-ol-nordic-curl': {
-    optional: false,
-    nodeState: 'locked',
-  },
-  'ol-nordic-curl': {
-    optional: false,
-    nodeState: 'locked',
-  },
-};
-
-export const legsPullData = [
-  {
-    id: 'ol-deadlift',
-    tooltip: {
-      content:
-        "Lilith's Action Skill is Phasewalk, which allows her to turn invisible and increase her running speed. Upon entering and exiting Phasewalk, Lilith releases a Phase Blast that damages enemies around her. While in Phasewalk, Lilith cannot shoot, jump, or collect loot, and a melee attack will cause her to exit Phasewalk. Lilith's Action Skill is Phasewalk, which allows her to turn invisible and increase her running speed. Upon entering and exiting Phasewalk, Lilith releases a Phase Blast that damages enemies around her. While in Phasewalk, Lilith cannot shoot, jump, or collect loot, and a melee attack will cause her to exit Phasewalk. Lilith's Action Skill is Phasewalk, which allows her to turn invisible and increase her running speed. Upon entering and exiting Phasewalk, Lilith releases a Phase Blast that damages enemies around her. While in Phasewalk, Lilith cannot shoot, jump, or collect loot, and a melee attack will cause her to exit Phasewalk.",
-    },
-    title: 'One-Legged Deadlift',
-    children: [
-      {
-        id: '45deg-hip-nc',
-        tooltip: {
-          content: lorem,
-        },
-        title: '45° Hip Nordic Curl',
-        children: [
-          {
-            id: 'nordic-curl-negative',
-            tooltip: {
-              content: lorem,
-            },
-            title: 'Nordic Curl (Negative)',
-            children: [
-              {
-                id: 'nordic-curl',
-                //icon: SquatIcon,
-                tooltip: {
-                  content: lorem,
-                },
-                title: 'Nordic Curl',
-                children: [
-                  {
-                    id: 'tuck-ol-nordic-curl',
-                    tooltip: {
-                      content: lorem,
-                    },
-                    title: 'Tuck One-Legged Nordic Curl',
-                    children: [
-                      {
-                        id: 'ol-nordic-curl',
-                        tooltip: {
-                          content: lorem,
-                        },
-                        title: 'One-Legged Nordic Curl',
-                        children: [],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-];
-
-export const pushUpData = [
-  {
-    id: 'ipu',
-    title: 'Incline Push Up',
-    tooltip: {
-      content: 'hi',
-    },
-    children: [
-      {
-        id: 'pu',
-        color: 'alternative',
-        title: 'Push Up',
-        tooltip: {
-          content: 'hii',
-        },
-        children: [
-          {
-            id: 'dpu',
-            title: 'Diamond Push Up',
-            tooltip: {
-              content: 'hi',
-            },
-            children: [],
-          },
-        ],
-      },
-    ],
-  },
-];
-
-export const webDevData = [
-  {
-    id: 'Computer Science',
-    title: 'Computer Science',
-    tooltip: { content: 'Basic of computer science' },
-    //icon: SquatIcon,
-    children: [
-      {
-        id: 'HTML',
-        title: 'HTML',
+        id: 2,
+        title: 'Defence',
         tooltip: {
           content:
-            'HTML basics, Forms and Validations, Conventions and Best Practices',
+            'Defence basics',
         },
+        icon: backdraftIcon,
         children: [
           {
-            id: 'HTML advanced',
-            title: 'HTML advanced',
+            id: 3,
+            title: 'Dexterity advanced',
             tooltip: {
-              content: 'Writing Semantic HTML, Accessibility, SEO Basics',
+              content: 'Dexterity',
             },
-            //icon: SquatIcon,
+            icon: blightPhoenixIcon,
             children: [
               {
-                id: 'Web Components',
-                title: 'Web Components',
+                id: 4,
+                title: 'Spin Components',
                 tooltip: {
-                  content: 'Shadow DOM, Custom Elements, HTML Templates',
+                  content: 'Spin',
                 },
-                //icon: SquatIcon,
+                icon: chainReactionIcon,
                 children: [],
               },
             ],
           },
         ],
-        //icon: SquatIcon,
       },
       {
-        id: 'CSS',
-        title: 'CSS',
+        id: 10,
+        title: 'Mana',
         tooltip: {
           content:
-            'Learn the basics, Making Layouts, Responsive design and Media Queries',
+            'Mana',
         },
-        //icon: SquatIcon,
+        icon: cloudKillIcon,
         children: [
           {
-            id: 'CSS3',
-            title: 'CSS3',
+            id: 11,
+            title: 'Mana advance',
             tooltip: {
               content:
-                'Transform, Transition, Animation, @font-face, Flex, Grid, Pseudo-selector',
+                'Mana advance',
             },
-            //icon: SquatIcon,
+            icon: convergeIcon,
             children: [
               {
-                id: 'CSS Architecture',
-                title: 'CSS Architecture',
-                tooltip: { content: 'BEM, OOCSS, SMACSS' },
-                //icon: SquatIcon,
+                id: 12,
+                title: 'Mana Architecture',
+                tooltip: { content: 'Mana Architecture' },
+                icon: elatedIcon,
                 children: [],
               },
               {
-                id: 'CSS Preprocessor',
-                title: 'CSS Preprocessor',
-                tooltip: { content: 'Sass, PostCSS, Less' },
-                //icon: SquatIcon,
+                id: 13,
+                title: 'Mana Preprocessor',
+                tooltip: { content: 'Sass, PostMana, Less' },
+                icon: fleetIcon,
                 children: [
                   {
-                    id: 'CSS Frameworks',
-                    title: 'CSS Frameworks',
+                    id: 14,
+                    title: 'Mana Frameworks',
                     tooltip: {
                       content:
-                        'Reactstrap, Material UI, Tailwind CSS, Chakra UI, Bootstrap, Materialize CSS, Bulma',
+                        'Mana',
                     },
-                    //icon: SquatIcon,
+                    icon: flickerIcon,
                     children: [],
                   },
                   {
-                    id: 'Modern CSS',
-                    title: 'Modern CSS',
+                    id: 15,
+                    title: 'Modern Mana',
                     tooltip: {
                       content:
-                        'Styled Component, CSS Modules, Styled JSX, Emotion, Radium, Glamorous',
+                        'Mana',
                     },
-                    //icon: SquatIcon,
+                    icon: lifeTapIcon,
                     children: [],
                   },
                 ],
@@ -376,77 +123,77 @@ export const webDevData = [
         ],
       },
       {
-        id: 'JavaScript',
-        title: 'JavaScript',
-        //icon: SquatIcon,
+        id: 100,
+        title: 'Swords',
+        icon: forsightIcon,
         tooltip: {
           content:
-            'Syntax and Basic Construct, Learn DOM Manipulation, Learn Fetch API / Ajax (XHR), ES6+ and modular JavaScript',
+            'Swords',
         },
         children: [
           {
-            id: 'Framework',
-            title: 'Framework',
-            //icon: SquatIcon,
-            tooltip: { content: 'React.js, Angular, Vue.js' },
+            id: 101,
+            title: 'Daggers',
+            icon: inertiaIcon,
+            tooltip: { content: 'Daggers' },
             children: [
               {
-                id: 'SSR',
-                title: 'SSR',
-                //icon: SquatIcon,
-                tooltip: { content: 'Next.js, Universal, Nuxt.js' },
+                id: 102,
+                title: 'Poison',
+                icon: heliosIcon,
+                tooltip: { content: 'Poison' },
                 children: [],
               },
             ],
           },
           {
-            id: 'Type Checkers',
-            title: 'Type Checkers',
-            //icon: SquatIcon,
-            tooltip: { content: 'TypeScript, Flow' },
+            id: 103,
+            title: 'Poison Checkers',
+            icon: lifeTapIcon,
+            tooltip: { content: 'Poison' },
             children: [],
           },
         ],
       },
       {
-        id: 'Node Basic',
-        title: 'Node Basic',
+        id: 104,
+        title: 'Armor Basic',
         tooltip: { content: 'Know the basics' },
-        //icon: SquatIcon,
+        icon: immolateIcon,
         children: [
           {
-            id: 'Package Managers',
-            title: 'Package Managers',
-            tooltip: { content: 'NPM, Yarn' },
-            //icon: SquatIcon,
+            id: 105,
+            title: 'Armor Managers',
+            tooltip: { content: 'Armor' },
+            icon: lifeTapIcon,
             children: [
               {
-                id: 'GraphQL',
-                title: 'GraphQL',
-                //icon: SquatIcon,
+                id: 106,
+                title: 'Armor Plate',
+                icon: lifeTapIcon,
                 tooltip: { content: 'Apollo, Relay Modern' },
                 children: [],
               },
               {
-                id: 'Module Bundlers',
-                title: 'Module Bundlers',
-                //icon: SquatIcon,
+                id: 107,
+                title: 'Module Chest',
+                icon: lifeTapIcon,
                 tooltip: { content: 'Webpack, Rollup, Parcel' },
                 children: [
                   {
-                    id: 'Test Your Apps',
-                    title: 'Test Your Apps',
-                    tooltip: { content: 'Mocha, Chai, Ava, Jest' },
-                    //icon: SquatIcon,
+                    id: 108,
+                    title: 'Power',
+                    tooltip: { content: 'Power' },
+                    icon: lifeTapIcon,
                     children: [],
                   },
                   {
-                    id: 'Applications',
-                    title: 'Applications',
+                    id: 109,
+                    title: 'Helmet',
                     tooltip: {
-                      content: 'React Native, Flutter, Ionic, Electron',
+                      content: 'Helmet',
                     },
-                    //icon: SquatIcon,
+                    icon: accelerateIcon,
                     children: [],
                   },
                 ],
@@ -454,10 +201,225 @@ export const webDevData = [
             ],
           },
           {
-            id: 'Static Site Generators',
-            title: 'Static Site Generators',
-            tooltip: { content: 'GatsbyJS, Vuepress, Jekyll, Hugo' },
-            //icon: SquatIcon,
+            id: 110,
+            title: 'Stamina',
+            tooltip: { content: 'Stamina' },
+            icon: accelerateIcon,
+            children: [],
+          },
+        ],
+      },
+      {
+        id: 111,
+        title: 'Power Stamina',
+        tooltip: { content: 'Stamina' },
+        icon: accelerateIcon,
+        children: [
+          {
+            id: 112,
+            title: 'Stamina Hosting',
+            tooltip: { content: 'Stamina' },
+            icon: wreckIcon,
+            children: [],
+          },
+        ],
+      },
+      {
+        id: 113,
+        title: 'Lian',
+        tooltip: { content: 'Stamina' },
+        icon: accelerateIcon,
+        children: [
+          {
+            id: 114,
+            title: 'Stamina',
+            tooltip: { content: 'Stamina' },
+            icon: wreckIcon,
+            children: [],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const AssassinationRogueData = [
+  {
+    id: 5,
+    title: 'Basic HP',
+    tooltip: { content: 'Basic HP' },
+    icon: wardIcon,
+    children: [
+      {
+        id: 120,
+        title: 'Defence',
+        tooltip: {
+          content:
+          'Defence'
+        },
+        icon: wreckIcon,
+        children: [
+          {
+            id: 121,
+            title: 'Defence advanced',
+            tooltip: {
+              content: 'Defence',
+            },
+            icon: accelerateIcon,
+            children: [
+              {
+                id: 122,
+                title: 'Defence',
+                tooltip: {
+                  content: 'Defence',
+                },
+                icon: accelerateIcon,
+                children: [],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 123,
+        title: 'Mana',
+        tooltip: {
+          content:
+            'Learn the basics',
+        },
+        icon: accelerateIcon,
+        children: [
+          {
+            id: 124,
+            title: 'Mana3',
+            tooltip: {
+              content:
+                'Transform, Transition, Animation, @font-face, Flex, Grid, Pseudo-selector',
+            },
+            icon: accelerateIcon,
+            children: [
+              {
+                id: 26,
+                title: 'Mana Architecture',
+                tooltip: { content: 'BEM, OOMana, SMAMana' },
+                icon: accelerateIcon,
+                children: [],
+              },
+              {
+                id: 27,
+                title: 'Mana Preprocessor',
+                tooltip: { content: 'Sass, PostMana, Less' },
+                icon: wreckIcon,
+                children: [
+                  {
+                    id: 28,
+                    title: 'Mana Frameworks',
+                    tooltip: {
+                      content:
+                        'Reactstrap, Material UI, Tailwind Mana, Chakra UI, Bootstrap, Materialize Mana, Bulma',
+                    },
+                    icon: thoughtLockIcon,
+                    children: [],
+                  },
+                  {
+                    id: 29,
+                    title: 'Modern Mana',
+                    tooltip: {
+                      content:
+                        'Styled Component, Mana Modules, Styled JSX, Emotion, Radium, Glamorous',
+                    },
+                    icon: scornIcon,
+                    children: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 70,
+        title: 'Power',
+        icon: sweetReleaseIcon,
+        tooltip: {
+          content:
+            'Power',
+        },
+        children: [
+          {
+            id: 71,
+            title: 'Power',
+            icon: subsequenceIcon,
+            tooltip: { content: 'Power' },
+            children: [
+              {
+                id: 72,
+                title: 'Power-44',
+                icon: suspensionIcon,
+                tooltip: { content: 'Power-44s' },
+                children: [],
+              },
+            ],
+          },
+          {
+            id: 73,
+            title: 'Type Shield',
+            icon: resIcon,
+            tooltip: { content: 'Type Shield' },
+            children: [],
+          },
+        ],
+      },
+      {
+        id: 74,
+        title: 'Power',
+        tooltip: { content: 'Know the basics' },
+        icon: restorationIcon,
+        children: [
+          {
+            id: 75,
+            title: 'Overpower mana',
+            tooltip: { content: 'Overpower mana' },
+            icon: recompenseIcon,
+            children: [
+              {
+                id: 180,
+                title: 'Mana-22',
+                icon: ruinIcon,
+                tooltip: { content: 'Mana-22' },
+                children: [],
+              },
+              {
+                id: 181,
+                title: 'Module Bundlers',
+                icon: reaperIcon,
+                tooltip: { content: 'Mana' },
+                children: [
+                  {
+                    id: 182,
+                    title: 'Test Your Power',
+                    tooltip: { content: 'Test Your Power' },
+                    icon: accelerateIcon,
+                    children: [],
+                  },
+                  {
+                    id: 6,
+                    title: 'Overview',
+                    tooltip: {
+                      content: 'Overview',
+                    },
+                    icon: kineticReflectIcon,
+                    children: [],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            id: 7,
+            title: 'Overview',
+            tooltip: { content: 'Overview' },
+            icon: accelerateIcon,
             children: [],
           },
         ],
@@ -466,28 +428,28 @@ export const webDevData = [
         id: 'Version Control System',
         title: 'Version Control System',
         tooltip: { content: 'Git, SVN' },
-        //icon: SquatIcon,
+        icon: accelerateIcon,
         children: [
           {
             id: 'Repo Hosting Services',
             title: 'Repo Hosting Services',
             tooltip: { content: 'GitHub, Gitlab, Bitbucket' },
-            //icon: SquatIcon,
+            icon: quickenIcon,
             children: [],
           },
         ],
       },
       {
-        id: 'Internet',
-        title: 'Internet',
-        tooltip: { content: 'DNS, HTTP, Browsers, Domain' },
-        //icon: SquatIcon,
+        id: 8,
+        title: 'Overview',
+        tooltip: { content: 'Overview' },
+        icon: accelerateIcon,
         children: [
           {
-            id: 'Web Security',
-            title: 'Web Security',
-            tooltip: { content: 'HTTPS, CORS, Attacks' },
-            //icon: SquatIcon,
+            id: 9,
+            title: 'Overview',
+            tooltip: { content: 'Overview' },
+            icon: mindsEyeIcon,
             children: [],
           },
         ],
@@ -496,12 +458,3 @@ export const webDevData = [
   },
 ];
 
-export const secretTree = [
-  {
-    id: 'A Secret Message',
-    title: 'Secret',
-    tooltip: { content: 'An intro to secrets' },
-    //icon: SquatIcon,
-    children: [],
-  },
-];

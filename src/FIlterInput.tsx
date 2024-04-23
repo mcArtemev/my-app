@@ -10,7 +10,7 @@ function FilterInput(props: Props) {
     <input
       style={{ height: '32px' }}
       onChange={e => handleFilter(e.target.value)}
-      placeholder="Filter through trees..."
+      placeholder="Find skill..."
     />
   );
 }

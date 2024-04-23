@@ -1,117 +1,61 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-// import {
-//   SkillTree,
-//   SkillTreeGroup,
-//   SkillProvider,
-//   SkillGroupDataType,
-//   SavedDataType,
-// } from '../src';
 import {
-  SkillTree,
-  SkillTreeGroup,
   SkillProvider,
-  SkillGroupDataType,
-  SavedDataType,
-  NodeSelectEvent,
 } from 'beautiful-skill-tree';
 import './index.css';
-import {
-  legsPushData,
-  webDevData,
-} from './mockData.tsx';
-//import { ContextStorage } from '../src/models';
-import FilterInput from './FIlterInput.tsx';
-
-function handleSave(
-  storage,
-  treeId,
-  skills
-) {
-  return storage.setItem(`skills-${treeId}`, JSON.stringify(skills));
-}
-
-function handleNodeSelect(e) {
-  console.log('selected node - ', e.key);
-  console.log('new state - ', e.state);
-}
+import SkillTreeModule from './SkillTreeModule.tsx';
+import logo from "./logo.png";
 
 const App = () => {
   return (
-    <SkillProvider>
-      <SkillTreeGroup
-        theme={{
-          headingFont: 'impact',
-          nodeAlternativeActiveBackgroundColor: 'blue',
-          nodeAlternativeFontColor: '#F7B538',
-          nodeAltenativeActiveFontColor: 'white',
-        }}
-      >
-        {({
-          skillCount,
-          selectedSkillCount,
-          resetSkills,
-          handleFilter,
-        }) => {
-          const totalSkillCount = skillCount.optional + skillCount.required;
-          const totalSelectedCount =
-            selectedSkillCount.optional + selectedSkillCount.required;
-
-          return (
-            <React.Fragment>
-              <nav
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  marginTop: '32px',
-                }}
-              >
-                <ul>
-                  <li>
-                    <a href="#sp">Squat Progression</a>
-                  </li>
-                  <li>
-                    <a href="#web">Programming Progression</a>
-                  </li>
-                </ul>
-                <h2 className="Example__heading">
-                  Completed skills: {totalSelectedCount}/{totalSkillCount}
-                </h2>
-                <button className="Example__reset-button" onClick={resetSkills}>
-                  Reset
-                </button>
-
-                <FilterInput handleFilter={handleFilter} />
-              </nav>
-              <div>
-                <SkillTree
-                  closedByDefault
-                  treeId="sp"
-                  handleNodeSelect={handleNodeSelect}
-                  title="Squat Progression"
-                  description="These are the progressions for squats"
-                  data={legsPushData}
-                  collapsible
-                />
-                
-                
-                <SkillTree
-                  closedByDefault
-                  treeId="web"
-                  handleNodeSelect={handleNodeSelect}
-                  title="Programming Tree"
-                  data={webDevData}
-                  handleSave={handleSave}
-                  collapsible
-                />
-                
-              </div>
-            </React.Fragment>
-          );
-        }}
-      </SkillTreeGroup>
-    </SkillProvider>
+    <>
+    <div className="App">
+      <SkillProvider>
+        <SkillTreeModule></SkillTreeModule>
+      </SkillProvider>
+      </div>
+      <div className='Text'>
+        <h1>История Создания игры World of Warcraft</h1>
+        <p>Игра World of Warcraft (WoW) была разработана и выпущена студией 
+  Blizzard Entertainment. Она является четвертой игрой в серии Warcraft, 
+  которая началась в 1994 году с выхода Warcraft: Orcs & Humans. 
+        </p>
+        <p>Вот краткая 
+  история создания WoW:
+  </p>
+         <p>
+          <b>Предпосылки: </b> 
+         Для понимания создания WoW важно отметить, что 
+    серия игр Warcraft уже имела огромную популярность к моменту анонса 
+    проекта MMORPG под названием World of Warcraft. Предыдущие игры серии 
+    получили большой успех благодаря захватывающему игровому процессу и 
+    захватывающей истории. </p> 
+    <p>
+    <b>Анонс и разработка: </b> 
+    World of Warcraft была анонсирована компанией 
+Blizzard Entertainment на выставке ECTS в Лондоне в 2001 году, а 
+официально выпущена в конце 2004 года. Разработка игры заняла около 5 лет 
+и содержала множество амбициозных и сложных технологических и 
+творческих решений.
+    </p>
+    <p>
+    <b>Игровой процесс и добавление контента: </b>World of Warcraft 
+предложила игрокам возможность погрузиться в огромный онлайн-мир, где 
+они могли взаимодействовать друг с другом, сражаться в PvP (игрок против 
+игрока), выполнять квесты и исследовать мир Azeroth. С течением времени 
+Blizzard регулярно выпускала новое дополнительное контент, значительно 
+расширяя игровой мир и добавляя новые квесты, подземелья, рейды и 
+механики.
+    </p>
+    <p>
+    <b>Глобальное влияние: </b>WoW сделала значительный вклад в 
+формирование и становление жанра MMORPG (массовая 
+многопользовательская онлайн-ролевая игра) и оказала огромное влияние на 
+индустрию видеоигр в целом. Она стала одной из самых успешных и 
+долгоживущих онлайн-игр в истории.
+    </p>
+    </div>
+    </>
   );
 };
 
